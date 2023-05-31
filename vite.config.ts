@@ -13,7 +13,6 @@ const isApp = process.env.UNI_PLATFORM === 'app'
 const WeappTailwindcssDisabled = isH5 || isApp
 
 const postcssPlugins = [tailwindcss(), autoprefixer()]
-
 if (!WeappTailwindcssDisabled) {
   postcssPlugins.push(
     rem2px({
@@ -25,6 +24,9 @@ if (!WeappTailwindcssDisabled) {
 }
 // https://vitejs.dev/config/
 export default defineConfig({
+  // server: {
+  //   port: 8083
+  // },
   // uvtw 一定要放在 uni 后面
   plugins: [
     uni(),
@@ -39,7 +41,7 @@ export default defineConfig({
       }
     })
     // uni-app vite 中不起作用，不知道为啥
-    // Components({
+    // Components({ 
     //   dts: './src/components.d.ts'
     // })
   ],
