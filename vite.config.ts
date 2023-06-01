@@ -24,9 +24,6 @@ if (!WeappTailwindcssDisabled) {
 }
 // https://vitejs.dev/config/
 export default defineConfig({
-  // server: {
-  //   port: 8083
-  // },
   // uvtw 一定要放在 uni 后面
   plugins: [
     uni(),
@@ -36,12 +33,12 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'uni-app', 'pinia'],
       dts: './src/auto-imports.d.ts',
-      eslintrc: {
-        enabled: true
-      }
+      // eslintrc: {
+      //   enabled: true
+      // }
     })
     // uni-app vite 中不起作用，不知道为啥
-    // Components({ 
+    // Components({
     //   dts: './src/components.d.ts'
     // })
   ],

@@ -1,7 +1,9 @@
 <template>
-  <view class="content">hello world</view>
+  <view ref="testRef" class="w-screen h-screen">
+    <view @click="testClick" class="w-10 h-10 bg-red-500">helloworld</view>
+  </view>
 </template>
-
-<script setup></script>
-<style lang="scss" scoped></style> 
- 
+<script setup>
+const { proxy: instance } = getCurrentInstance()
+</script>
+<style lang="scss" scoped></style>

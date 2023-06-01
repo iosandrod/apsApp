@@ -1,19 +1,19 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   env: {
-    browser: true,
-    node: true,
-    es2021: true
+    browser: false,
+    node: false,
+    es2021: false
   },
   globals: {
     uni: true // readonly
   },
   extends: [
-    'standard',
-    'plugin:prettier/recommended',
-    'eslint:recommended',
-    'plugin:vue/essential',
-    'plugin:@typescript-eslint/recommended',
+    // 'standard',
+    // 'plugin:prettier/recommended',
+    // 'eslint:recommended',
+    // 'plugin:vue/essential',
+    // 'plugin:@typescript-eslint/recommended',
     './.eslintrc-auto-import.json'
   ],
   parser: 'vue-eslint-parser',
@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
-    'vue/multi-word-component-names': 1
+    // 'vue/multi-word-component-names': 1
   },
   overrides: [
     {
